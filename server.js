@@ -1,6 +1,5 @@
 const express = require("express");
 const colors = require("picocolors");
-const v1ProductRouter = require("./routes/productRoutes");
 const v1UsuarioRouter = require("./routes/usuarioRoutes");
 const v1EventoRouter = require("./routes/eventoRoutes");
 
@@ -8,7 +7,6 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
-app.use("/api/productos", v1ProductRouter);
 app.use("/api/usuarios", v1UsuarioRouter);
 app.use("/api/eventos", v1EventoRouter);
 
