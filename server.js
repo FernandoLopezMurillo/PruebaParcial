@@ -1,14 +1,18 @@
 const express = require("express");
+const cors = require("cors");
 const colors = require("picocolors");
 const v1UsuarioRouter = require("./routes/usuarioRoutes");
 const v1EventoRouter = require("./routes/eventoRoutes");
+const v1ExternoRouter = require("./routes/externoRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+app.use(cors());
 app.use(express.json());
 
 app.use("/api/usuarios", v1UsuarioRouter);
 app.use("/api/eventos", v1EventoRouter);
+app.use("/api/externos", v1ExternoRouter);
 
 app.listen(PORT, () => {
     console.log(colors.bgGreen(`Server is running on port ${PORT}`));
