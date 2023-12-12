@@ -3,11 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import HomePage from './pages/HomePage';
 import CrearEvento from './pages/CrearEvento';
-//import axios from 'axios';
+import axios from 'axios';
 
 const App = () => {
   //axios.defaults.withCredentials = true;
-  //axios.post("https://prueba-parcial.vercel.app/")
+  axios.post("https://prueba-parcial.vercel.app/")
   return (
     <div>
       <Router>
