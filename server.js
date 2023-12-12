@@ -7,7 +7,13 @@ const v1ExternoRouter = require("./routes/externoRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-app.use(cors());
+app.use(cors(
+    {
+        origin: "*",
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 app.use(express.json());
 
 app.use("/api/usuarios", v1UsuarioRouter);
