@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(cors(
     {
-        origin: "https://prueba-parcial.vercel.app/",
+        origin: "https://prueba-parcial.vercel.app",
         //origin: "*",
         methods: ["POST", "GET"],
         credentials: true
