@@ -7,7 +7,7 @@ import axios from 'axios';
 
 const App = () => {
   //axios.defaults.withCredentials = true;
-  axios.post("https://prueba-parcial.vercel.app/")
+  //axios.post("https://prueba-parcial.vercel.app/")
   return (
     <div>
       <Router>
