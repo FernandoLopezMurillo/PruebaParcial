@@ -8,7 +8,7 @@ const getAllEventos = async (req, res) => {
       console.log(colors.yellow("No se encontraron eventos"));
       return res.status(404).json({ error: "No se encontraron eventos" });
     }
-    console.log(colors.blue("Se han obtenido los eventos", evento.descripcion));
+    console.log(colors.blue("Se han obtenido los eventos " + evento[0].descripcion));
     res.json(evento);
   } catch (error) {
     res.status(500).json({ error: "Error al obtener los eventos" });

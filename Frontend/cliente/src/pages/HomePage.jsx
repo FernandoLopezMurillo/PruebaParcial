@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import api from '../services/api';
 import MapaMultiple from "../components/MapaMultiple";
+import axios from 'axios';
 
 const HomePage = () => {
     const [eventos, setEventos] = useState([]);
@@ -9,7 +10,8 @@ const HomePage = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const eventos = await api.get("https://prueba-parcial.vercel.app/eventos");
+                const eventos = await api.get(`/eventos`);
+                //const eventos = await axios.get(`https://prueba-parcial.vercel.app/eventos`);
                 setEventos(eventos.data);
 
                 const direccionesArray = eventos.data.map((evento) => evento.direccion);
