@@ -26,7 +26,7 @@ const CrearEventoForm = () => {
     e.preventDefault();
     try {
       // Realizar la solicitud POST al servidor con los datos del evento
-      const response = await api.post("/eventos", eventoData);
+      const response = await axios.post("https://prueba-parcial.vercel.app/api/eventos", eventoData);
       console.log("Evento creado:", response.data);
       // Puedes hacer algo adicional después de crear el evento, como redirigir a la página de detalles del evento, etc.
       navigate('/')
