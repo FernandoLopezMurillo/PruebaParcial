@@ -6,7 +6,7 @@ import CrearEvento from './pages/CrearEvento';
 import axios from 'axios';
 
 const App = () => {
-  //axios.defaults.withCredentials = true;
+  axios.defaults.withCredentials = true;
   axios.post("https://prueba-parcial.vercel.app/")
   return (
     <div>

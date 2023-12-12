@@ -17,9 +17,9 @@ app.use(cors(
 ));
 app.use(express.json());
 
-app.get("/", (req,res) => {
+/*app.get("/", (req,res) => {
     res.json("Hello");
-})
+})*/
 
 app.use("/api/usuarios", v1UsuarioRouter);
 app.use("/api/eventos", v1EventoRouter);
