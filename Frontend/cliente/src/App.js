@@ -6,7 +6,8 @@ import CrearEvento from './pages/CrearEvento';
 import axios from 'axios';
 
 const App = () => {
-  axios.get("https://prueba-parcial.vercel.app/api/usuarios");
+  axios.defaults.withCredentials = true;
+  axios.post("https://prueba-parcial.vercel.app/");
   return (
     <div>
       <Router>

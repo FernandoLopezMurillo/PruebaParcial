@@ -9,7 +9,7 @@ const HomePage = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const eventos = await api.get(`/eventos`);
+                const eventos = await api.get("https://prueba-parcial.vercel.app/eventos");
                 setEventos(eventos.data);
 
                 const direccionesArray = eventos.data.map((evento) => evento.direccion);
