@@ -30,7 +30,7 @@ app.listen(PORT, () => {
 });
   
 const mongoose = require("mongoose");
-mongoose.connect("mongodb+srv://0619987850:1234@pruebaparcial.5gnugzx.mongodb.net/Parcial2?retryWrites=true&w=majority&appName=AtlasApp");
+mongoose.connect("mongodb+srv://0619987850:1234@pruebaparcial.5gnugzx.mongodb.net/Parcial3?retryWrites=true&w=majority&appName=AtlasApp");
   
   // Control de errores
 const db = mongoose.connection;
