@@ -10,11 +10,11 @@ const HomePage = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                //const eventos = await api.get(`/eventos`);
-                const eventos = await axios.get(`https://prueba-parcial.vercel.app/api/eventos`);
+                const eventos = await api.get(`/eventos`);
+                //const eventos = await axios.get(`https://prueba-parcial.vercel.app/api/eventos`);
                 setEventos(eventos.data);
 
-                const direccionesArray = eventos.map((evento) => evento.direccion);
+                const direccionesArray = eventos.map((evento) => evento.direccion );
                 setDirecciones(direccionesArray);
 
             } catch(error){
