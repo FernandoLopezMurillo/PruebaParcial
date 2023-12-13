@@ -15,7 +15,7 @@ const MapaMultiple = ({ direcciones, filtrarMapa }) => {
 
         for (const direccion of direcciones) {
 
-          const response = await api.get(`/externos/geocache?direccion=${direccion}`);
+          const response = await api.get(`https://prueba-parcial.vercel.app/api/externos/geocache?direccion=${direccion}`);
           const result = response.data;
           nuevosMarkers.push(result.posicion);
         }
