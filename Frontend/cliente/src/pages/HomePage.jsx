@@ -14,8 +14,8 @@ const HomePage = () => {
                 const eventos = await axios.get(`https://prueba-parcial.vercel.app/api/eventos`);
                 setEventos(eventos.data);
 
-                const direccionesArray = eventos.data.map((evento) => evento.direccion);
-                setDirecciones(direccionesArray);
+                const direcciones = eventos.data.map((evento) => evento.direccion);
+                setDirecciones(direcciones);
 
             } catch(error){
                 console.error('Error fetching eventos: ', error);
@@ -46,7 +46,7 @@ const HomePage = () => {
                 >
                 <MapaMultiple
                     filtrarMapa={true}
-                    direcciones={direcciones}
+                    direcciones={eventos.data.map((evento) => evento.direccion)}
                 />
                 </div>
             )}
