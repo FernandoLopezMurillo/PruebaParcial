@@ -46,7 +46,7 @@ const HomePage = () => {
                 >
                 <MapaMultiple
                     filtrarMapa={true}
-                    direcciones={eventos.data.map((evento) => evento.direccion)}
+                    direcciones={direcciones}
                 />
                 </div>
             )}
