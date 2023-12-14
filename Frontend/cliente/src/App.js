@@ -19,19 +19,10 @@ function App() {
     localStorage.setItem('token', res.credential);
     document.getElementById("signInDiv").hidden = true;
     setUser(user);
-
-    try {
-      const response = await auth.post('/logged', {token: res.credential});
-      console.log(response.data);
-    } catch (error) {
-      console.error('Error al enviar el token al backend', error);
-    }
   }
 
   async function handleSignOut(e){
     e.preventDefault();
-    const token = localStorage.getItem('token');
-    localStorage.removeItem('token');
     setUser({});
     document.getElementById("signInDiv").hidden = false;
   }
@@ -49,11 +40,7 @@ function App() {
       {theme: "outline", size: "large"}
     );
 
-    const storedToken = localStorage.getItem('token');
-    if(storedToken) {
-      const storedUser = jwtDecode(storedToken);
-      setUser(storedUser);
-    }
+    
   }, []);
 
   return (
@@ -64,9 +51,9 @@ function App() {
           Object.keys(user).length != 0 && 
           <button onClick={(e) => handleSignOut(e)}>Sign out</button>
         }
-        {user &&
+        { user &&
           <div>
-            NOP
+            <h1>AAAAA</h1>
           </div>
         }
       </div>
