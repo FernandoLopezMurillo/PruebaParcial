@@ -11,7 +11,11 @@ const HomePage = () => {
         const fetchData = async () => {
             try {
                 //const eventos = await api.get(`/eventos`);
-                const eventos = await api.get(`/eventos`);
+                const eventos = await api.get(`/eventos`, {
+                    headers: {
+                      'Authorization': `Bearer ${localStorage.getItem('token')}`,
+                    },
+                  });
                 setEventos(eventos.data);
 
                 const direcciones = eventos.data.map((evento) => evento.direccion);
