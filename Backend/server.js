@@ -10,8 +10,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(cors(
     {
-        //origin: "https://prueba-parcial.vercel.app",
-        origin: "*",
+        origin: "https://prueba-parcial-m4zh.vercel.app",
+        //origin: "*",
         methods: ["POST", "GET"],
         credentials: true
     }
