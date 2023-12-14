@@ -1,7 +1,13 @@
 const mongoose = require("mongoose");
 
 const eventoSchema = new mongoose.Schema({
-    anfitrion: String,
+    anfitrion: {
+        type: String,
+        required: true,
+        unique: true,
+        lowercase: true,
+        trim: true,
+    } ,
     descripcion: {type: String, length: 50 },
     inicio: { type: Date},
     duracion: Number,

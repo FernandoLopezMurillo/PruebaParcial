@@ -11,7 +11,7 @@ const HomePage = () => {
         const fetchData = async () => {
             try {
                 //const eventos = await api.get(`/eventos`);
-                const eventos = await axios.get(`https://prueba-parcial.vercel.app/api/eventos`);
+                const eventos = await api.get(`/eventos`);
                 setEventos(eventos.data);
 
                 const direcciones = eventos.data.map((evento) => evento.direccion);

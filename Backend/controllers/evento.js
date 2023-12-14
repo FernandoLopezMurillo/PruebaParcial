@@ -1,6 +1,8 @@
 const Evento = require("../models/evento");
 const colors = require("picocolors");
 
+
+
 const getAllEventos = async (req, res) => {
   try {
     const evento = await Evento.find();
