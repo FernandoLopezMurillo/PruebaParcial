@@ -66,7 +66,7 @@ function App() {
         }
         {user &&
           <div>
-            NUEVO
+            NUEVO!!!
           </div>
         }
       </div>
