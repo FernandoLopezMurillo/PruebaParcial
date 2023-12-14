@@ -66,7 +66,7 @@ function App() {
         }
         {user &&
           <div>
-            NOP
+            CORRECTO
           </div>
         }
       </div>
