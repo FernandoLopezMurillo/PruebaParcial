@@ -66,9 +66,7 @@ function App() {
         }
         {user &&
           <div>
-            <Link to="/">
-                <button>Inicio</button>
-            </Link>
+            HOLA
           </div>
         }
       </div>
