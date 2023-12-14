@@ -5,7 +5,6 @@ const verifyTokenMiddleware = require("../controllers/middleWareAuth");
 
 const eventoController = require("../controllers/evento");
 
-router.use(verifyTokenMiddleware);
 //CRUD de productos. Se pone despues de las rutas anteriores para que no interfiera con ellas
 router.get("/", eventoController.getAllEventos); 
 router.get("/:id", eventoController.getEventos); 
