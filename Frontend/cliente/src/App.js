@@ -70,12 +70,7 @@ function App() {
           </div>
         }
       </div>
-      <Router>
-        <Routes>
-          <Route path="/" element={<HomePage></HomePage>}></Route>
-          <Route path="/crear-evento" element={<CrearEvento></CrearEvento>}></Route>
-        </Routes>
-      </Router>
+      
       
     </div>
   );
