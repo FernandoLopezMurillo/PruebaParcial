@@ -61,17 +61,17 @@ function App() {
       <div className='App'>
         <div id="signInDiv"></div>
         {
-          Object.keys(user).length != 0 && 
-          <button onClick={(e) => handleSignOut(e)}>Sign out</button>
-        }
-        {user &&
+          Object.keys(user).length != 0 &&
           <div>
-            NUEVO!!!
-          </div>
+            <button onClick={(e) => handleSignOut(e)}>Sign out</button>
+          </div> 
+          
         }
+        
       </div>
       <Router>
         <Routes>
+          
           <Route path="/" element={<HomePage></HomePage>}></Route>
           <Route path="/crear-evento" element={<CrearEvento></CrearEvento>}></Route>
         </Routes>
