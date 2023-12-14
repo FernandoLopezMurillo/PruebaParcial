@@ -1,6 +1,6 @@
 
 const {OAuth2Client} = require('google-auth-library');
-const { router } = require('../server');
+const router = express.Router();
 
 const client = new OAuth2Client("989704436454-csk7qq6vcu178n8g8potcdhhdc75l06p.apps.googleusercontent.com");
 
