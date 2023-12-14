@@ -17,7 +17,7 @@ function App() {
     var user = jwtDecode(res.credential);
     console.log(user);
     localStorage.setItem('token', res.credential);
-    document.getElementById("sigInDiv").hidden = true;
+    document.getElementById("signInDiv").hidden = true;
     setUser(user);
 
     try {
