@@ -25,7 +25,7 @@ app.use(express.json());
 app.use("/api/usuarios", v1UsuarioRouter);
 app.use("/api/eventos", v1EventoRouter);
 app.use("/api/externos", v1ExternoRouter);
-app.use("/auth", v1AuthRouter);
+app.use("/api/auth", v1AuthRouter);
 
 app.listen(PORT, () => {
     console.log(colors.bgGreen(`Server is running on port ${PORT}`));
