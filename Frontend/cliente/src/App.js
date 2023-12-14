@@ -66,7 +66,7 @@ function App() {
         }
         {user &&
           <div>
-            HOLA!!!!
+            NOP
           </div>
         }
       </div>
