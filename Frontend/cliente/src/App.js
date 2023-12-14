@@ -59,14 +59,14 @@ function App() {
   return (
     <div>
       <div className='App'>
-        <div id="sigInDiv"></div>
+        <div id="signInDiv"></div>
         {
           Object.keys(user).length != 0 && 
           <button onClick={(e) => handleSignOut(e)}>Sign out</button>
         }
         {user &&
           <div>
-            HOLA
+            HOLA??
           </div>
         }
       </div>
