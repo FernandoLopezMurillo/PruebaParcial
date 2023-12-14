@@ -67,7 +67,13 @@ function App() {
           </div> 
           
         }
-        
+        {user &&
+          <div>
+            <img src={user.picture}></img>
+            <h3>{user.email}</h3>
+          </div>
+          
+        }
       </div>
       <Router>
         <Routes>
