@@ -54,6 +54,9 @@ function App() {
       const storedUser = jwtDecode(storedToken);
       setUser(storedUser);
     }
+
+    document.getElementById("signInDiv").hidden = false;
+    
   }, []);
 
   return (
@@ -65,7 +68,6 @@ function App() {
           <div>
             <button onClick={(e) => handleSignOut(e)}>Sign out</button>
           </div> 
-          
         }
         {user &&
           <div>
@@ -77,7 +79,6 @@ function App() {
       </div>
       <Router>
         <Routes>
-          
           <Route path="/" element={<HomePage></HomePage>}></Route>
           <Route path="/crear-evento" element={<CrearEvento></CrearEvento>}></Route>
         </Routes>
