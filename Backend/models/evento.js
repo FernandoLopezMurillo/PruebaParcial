@@ -12,7 +12,8 @@ const eventoSchema = new mongoose.Schema({
         trim: true,
     } ,
     fotos: {
-        type: String,
+        type: [String],
+        default: []
     },
     
 });
