@@ -26,7 +26,7 @@ const Detalles = () => {
                     <h5>Inicio del evento: {evento.inicio}</h5>
                     <h5>Lugar: {evento.direccion}</h5>
                     <h5>Email organizador: {evento.organizador}</h5>
-                    <h5>Imagenes:</h5> <img style={{maxHeight: '300px'}} src={evento.fotos}></img>
+                    <h5>Imagenes:</h5> <img style={{maxHeight: '300px'}} src={evento.fotos[0]}></img>
                     <Link to={`/`}>
                         <button>Inicio</button>
                     </Link>

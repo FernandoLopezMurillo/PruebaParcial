@@ -36,7 +36,7 @@ const createEvento = async (req, res) => {
     const evento = req.body;
       const eventoExistente = await Evento.findOne({
         nombre: evento.nombre,
-        organizador: evento.organizador
+        organizador: evento.organizador,
       });
 
       if (eventoExistente) {
