@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const colors = require("picocolors");
-const v1UsuarioRouter = require("./routes/usuarioRoutes");
 const v1EventoRouter = require("./routes/eventoRoutes");
 const v1ExternoRouter = require("./routes/externoRoutes");
 const v1AuthRouter = require("./routes/authRoutes");
@@ -21,7 +20,6 @@ app.use(express.json());
     res.json("Hello");
 })*/
 
-app.use("/api/usuarios", v1UsuarioRouter);
 app.use("/api/eventos", v1EventoRouter);
 app.use("/api/externos", v1ExternoRouter);
 app.use("/auth", v1AuthRouter);
