@@ -39,7 +39,7 @@ const HomePage = () => {
     return(
         <div>
             <Link to="/crear-evento">
-                <button>Crear Evento</button>
+                <button>Crear Evento Nuevo</button>
             </Link>
             {eventos.map((evento) => (
                 <div>

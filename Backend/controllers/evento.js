@@ -34,9 +34,12 @@ const getEventos = async (req, res) => {
 const createEvento = async (req, res) => {
   try {
     const evento = req.body;
-      const eventoExistente = await Evento.findOne({
+    const nuevoEvento = await Evento.create(evento);
+    console.log(colors.blue(`Nuevo evento creado: ${nuevoEvento}`));
+    res.status(201).json({ nuevoEvento });
+      /*const eventoExistente = await Evento.findOne({
         nombre: evento.nombre,
-        organizador: evento.organizador,
+        descripcion: evento.descripcion,
       });
 
       if (eventoExistente) {
@@ -46,7 +49,7 @@ const createEvento = async (req, res) => {
         const nuevoEvento = await Evento.create(evento);
         console.log(colors.blue(`Nuevo evento creado: ${nuevoEvento}`));
         res.status(201).json({ nuevoEvento });
-      }
+      }*/
     
   } catch (error) {
     res.status(500).json({ error: "Error al crear los eventos" });
@@ -58,8 +61,8 @@ const updateEvento = async (req, res) => {
   const datosActualizar = req.body;
 
   try {
-    const evento = await Evento.findById(id);
-    if(!evento){
+    const product = await Evento.findById(id);
+    if(!product){
       console.log(colors.yellow("No se encontró el evento para actualizarlo"));
       return res.status(404).json({ error: "Evento no encontrado" });
     }else{
