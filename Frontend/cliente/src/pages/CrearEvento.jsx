@@ -6,12 +6,12 @@ import { useNavigate } from 'react-router-dom';
 const CrearEventoForm = () => {
   const navigate = useNavigate();
   const [eventoData, setEventoData] = useState({
-    anfitrion: "",
-    descripcion: "",
+    nombre: "",
     inicio: "",
-    duracion: 0,
-    fotos: [],
     direccion: "",
+    organizador: "",
+    fotos: [],
+    
   });
 
   const handleChange = (e) => {
@@ -71,21 +71,21 @@ const CrearEventoForm = () => {
       <h2>Crear Nuevo Evento</h2>
       <form onSubmit={handleSubmit}>
         <label>
-          Anfitrión:
+          Email organizador:
           <input
             type="text"
-            name="anfitrion"
-            value={eventoData.anfitrion}
+            name="organizador"
+            value={eventoData.organizador}
             onChange={handleChange}
           />
         </label>
         <br />
         <label>
-          Descripción:
+          Nombre:
           <input
             type="text"
-            name="descripcion"
-            value={eventoData.descripcion}
+            name="nombre"
+            value={eventoData.nombre}
             onChange={handleChange}
           />
         </label>
@@ -100,15 +100,6 @@ const CrearEventoForm = () => {
           />
         </label>
         <br />
-        <label>
-          Duración (en minutos):
-          <input
-            type="number"
-            name="duracion"
-            value={eventoData.duracion}
-            onChange={handleChange}
-          />
-        </label>
         <br />
         <label>
           Fotos (separadas por comas):

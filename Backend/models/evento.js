@@ -8,13 +8,11 @@ const eventoSchema = new mongoose.Schema({
     organizador: {
         type: String,
         required: true,
-        unique: true,
         lowercase: true,
         trim: true,
     } ,
     fotos: {
-        type: [String],
-        default: [],
+        type: String,
     },
     
 });

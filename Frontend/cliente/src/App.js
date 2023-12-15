@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import HomePage from './pages/HomePage';
 import CrearEvento from './pages/CrearEvento';
+import Detalles from './pages/Detalles';
 import { Link } from "react-router-dom";
 import auth from './services/auth';
 
@@ -81,6 +82,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage></HomePage>}></Route>
           <Route path="/crear-evento" element={<CrearEvento></CrearEvento>}></Route>
+          <Route path='/detalles-evento/:id' element={<Detalles></Detalles>}></Route>
         </Routes>
       </Router>
       

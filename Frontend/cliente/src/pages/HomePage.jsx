@@ -34,7 +34,14 @@ const HomePage = () => {
                 <button>Crear Evento</button>
             </Link>
             {eventos.map((evento) => (
-                <p>{`${evento.anfitrion}`}</p>
+                <div>
+                    <p> {`${evento.nombre}`} <br></br>
+                    {`${evento.organizador}`} <br></br>
+                    <Link to={`/detalles-evento/${evento._id}`}>
+                        <button>Detalles</button>
+                    </Link>
+                    </p>
+                </div>
             ))} 
             {direcciones.length > 0 && (
                 <div

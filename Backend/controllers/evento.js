@@ -10,7 +10,6 @@ const getAllEventos = async (req, res) => {
       console.log(colors.yellow("No se encontraron eventos"));
       return res.status(404).json({ error: "No se encontraron eventos" });
     }
-    console.log(colors.blue("Se han obtenido los eventos " + evento[0].descripcion));
     res.json(evento);
   } catch (error) {
     res.status(500).json({ error: "Error al obtener los eventos" });
@@ -25,7 +24,7 @@ const getEventos = async (req, res) => {
       console.log(colors.yellow("No se encontró el evento"));
       return res.status(404).json({ error: "No se encontró el evento" });
     }
-    console.log(colors.blue("Se ha obtenido el evento " + evento.descripcion ));
+    console.log(colors.blue("Se ha obtenido el evento " + evento.nombre ));
     res.json(evento);
   } catch (error) {
     res.status(500).json({ error: "Error al obtener el evento" });
@@ -36,13 +35,12 @@ const createEvento = async (req, res) => {
   try {
     const evento = req.body;
       const eventoExistente = await Evento.findOne({
-        anfitrion: evento.anfitrion,
-        descripcion: evento.descripcion,
-        duracion: evento.duracion
+        nombre: evento.nombre,
+        organizador: evento.organizador
       });
 
       if (eventoExistente) {
-        console.log(colors.yellow(`El evento ya existe: ${eventoExistente.descripcion}`));
+        console.log(colors.yellow(`El evento ya existe: ${eventoExistente.nombre}`));
         res.status(201).send("Los eventos ya estaban en la base de datos");
       } else {
         const nuevoEvento = await Evento.create(evento);
