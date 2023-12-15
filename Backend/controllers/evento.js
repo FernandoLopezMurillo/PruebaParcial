@@ -58,8 +58,8 @@ const updateEvento = async (req, res) => {
   const datosActualizar = req.body;
 
   try {
-    const product = await Evento.findById(id);
-    if(!product){
+    const evento = await Evento.findById(id);
+    if(!evento){
       console.log(colors.yellow("No se encontró el evento para actualizarlo"));
       return res.status(404).json({ error: "Evento no encontrado" });
     }else{

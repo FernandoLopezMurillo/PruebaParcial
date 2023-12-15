@@ -28,6 +28,14 @@ const HomePage = () => {
         fetchData();
     }, []);
 
+    const handleEliminar = async (eventoId) => {
+        try {
+            const response = await api.delete(`/eventos/${eventoId}`);
+        } catch (error) {
+            console.error('Error al eliminar el evento');
+        }
+    }
+
     return(
         <div>
             <Link to="/crear-evento">
@@ -40,6 +48,9 @@ const HomePage = () => {
                     <Link to={`/detalles-evento/${evento._id}`}>
                         <button>Detalles</button>
                     </Link>
+                    <button onClick={() => handleEliminar(evento._id)}>
+                        Eliminar
+                    </button>
                     </p>
                 </div>
             ))} 
